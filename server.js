@@ -58,9 +58,9 @@ app.post("/api/tables", function(req, res) {
 
 //DELETE Tables
  //=================================================
- app.delete("/api/notes/:id", function(req, res) {
-  //GET AN ID FROM THE NOTE IN THE DB
-  //IF ID MATCHES DELETE
+//  app.delete("/api/notes/:id", function(req, res) {
+//   //GET AN ID FROM THE NOTE IN THE DB
+//   //IF ID MATCHES DELETE
 
 
 
@@ -68,6 +68,14 @@ app.post("/api/tables", function(req, res) {
 //==================================================
 app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "index.html" ));
+});
+
+app.get("/make-res", function(req, res) {
+  res.sendFile(path.join(__dirname, "make-res.html" ));
+});
+
+app.get("/view-tables", function(req, res) {
+  res.sendFile(path.join(__dirname, "view-tables.html" ));
 });
 
 
