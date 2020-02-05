@@ -3,8 +3,12 @@
 
 <head>
   <meta charset="UTF-8">
+<<<<<<< HEAD
   <title>View Tables</title>
   <!-- Latest compiled and minified CSS & JS -->
+=======
+  <title>Hot Restaurant</title>
+>>>>>>> 2e56610c2a976a5abc68c4cd1ecf2c72318319e2
   <link rel="stylesheet"
     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet"
@@ -31,57 +35,42 @@
         </div>
     
         <div class="row">
-          <div class="col-lg-12">
-    
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">Reservations</h4>
+            <div class="col-lg-12">
+      
+              <!-- Current Tables in Use -->
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">Reservations</h4>
+                </div>
+                <div class="panel-body" id="tableSection">
+                </div>
               </div>
-              <div class="panel-body" id="tableSection">
-              </div>
-            </div>
-    
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">Waiting List</h4>
-              </div>
-              <div class="panel-body" id="waitlistSection">
+      
+              <!-- Waiting List Panel -->
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">Waiting List</h4>
+                </div>
+                <div class="panel-body" id="waitlistSection">
+                </div>
               </div>
             </div>
           </div>
-        </div>    
 
     <footer class="footer">
       <div class="container">
         <p><a href=#>API Table Link</a> | <a href=#>API Wait List</a> </p>
       </div>
     </footer>
+<<<<<<< HEAD
 
   <script type="text/javascript">
     $("#search-btn").on("click", function() {
       var searchedCharacter = $("#character-search").val().trim();
+=======
+>>>>>>> 2e56610c2a976a5abc68c4cd1ecf2c72318319e2
 
-      // Using a RegEx Pattern to remove spaces from searchedCharacter
-      // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-      searchedCharacter = searchedCharacter.replace(/\s+/g, "").toLowerCase();
-
-      $.get("/api/characters/" + searchedCharacter, function(data) {
-        console.log(data);
-        if (data) {
-          $("#stats").show();
-          $("#name").text(data.name);
-          $("#role").text(data.role);
-          $("#age").text(data.age);
-          $("#force-points").text(data.forcePoints);
-        } else {
-          $("#name").text(
-            "The force is not strong with this one. Your character was not found.");
-          $("#stats").hide();
-        }
-      });
-    });
-
-  </script>
+ 
 </body>
 
 </html>

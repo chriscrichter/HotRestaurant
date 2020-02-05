@@ -1,6 +1,6 @@
 //Dependencies
 const express = require('express');
-
+const path = require('path'); 
 
 //SET UP EXPRESS APP
 const app = express(); 
@@ -12,14 +12,24 @@ var PORT = process.env.PORT || 3000;
 
 
 
-//ROUTES 
-// app.get('/')
+//API-ROUTES 
+//======================================================
+
+
+
+//HTML ROUTES
+//==================================================
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "index.html" ));
+});
+
+
 
 
 
 
 // Starts the server to begin listening
-// =============================================================
+// =====================================================
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
 });
