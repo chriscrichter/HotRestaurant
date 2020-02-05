@@ -65,5 +65,39 @@
     </div>
   </footer>
   
+<script>
+$(".submit").on("click", function(event) {
+  event.preventDefault();
+
+  var newReservation = {
+    customerName: $("#name").val().trim(),
+    phoneNumber: $("#id").val().trim(),
+    customerEmail: $("#email").val().trim(),
+    customerID: $("#id").val().trim()
+  };
+
+  console.log(newReservation);
+
+  $.post("/api/tables", newReservation,
+        function(data) {
+
+          if (data) {
+            alert("You reservation is booked!");
+          }
+
+          else {
+            alert("Restaurant is full. You are on the waiting list");
+          }
+
+          $("#name").val("");
+          $("#reserve-phone").val("");
+          $("#email").val("");
+          $("#id").val("");
+
+        });
+
+      });
+</script>
 </body>
+
 </html>
