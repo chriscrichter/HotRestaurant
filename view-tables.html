@@ -19,45 +19,42 @@
 </head>
 
 <body>
-
     <div class="container">
-
-        <div class="jumbotron">
-          <h1 class="text-center"></span>Hot Restaurant</h1>
-          <hr>
-          <h2 class="text-center">Current Reservations and Waiting List</h2>
-          <br>
-    
-          <div class="text-center">
-            <a href="/reserve"><button class="btn btn-lg btn-danger"></span> Make Reservation</button></a>
-            <a href="/"><button class="btn btn-lg btn-default"><span class="fa fa-home"></span></button></a>
-          </div>
+  
+      <div class="jumbotron">
+        <h1 class="text-center">Hot Restaurant</h1>
+        <hr>
+        <h2 class="text-center">Reservations and Waiting List</h2>
+        <br>
+  
+        <div class="text-center">
+          <a href="/make-res"><button class="btn btn-lg btn-danger">Make Reservation</button></a>
+          <a href="/"><button class="btn btn-lg btn-default"><span class="fa fa-home"></span></button></a>
         </div>
-    
-        <div class="row">
-            <div class="col-lg-12">
-      
-              <!-- Current Tables in Use -->
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">Reservations</h4>
-                </div>
-                <div class="panel-body" id="tableSection">
-                </div>
-              </div>
-      
-              <!-- Waiting List Panel -->
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">Waiting List</h4>
-                </div>
-                <div class="panel-body" id="waitlistSection">
-                </div>
-              </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-lg-12">
+  
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">Current Reservations</h4>
+            </div>
+            <div class="panel-body" id="tableSection">
             </div>
           </div>
 
-    <footer class="footer">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">Waiting List</h4>
+            </div>
+            <div class="panel-body" id="waitlistSection">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
       <div class="container">
         <p><a href=#>API Table Link</a> | <a href=#>API Wait List</a> </p>
       </div>
@@ -70,7 +67,6 @@
 =======
 >>>>>>> 2e56610c2a976a5abc68c4cd1ecf2c72318319e2
 
- 
 </body>
 
 </html>
