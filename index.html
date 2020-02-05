@@ -17,51 +17,25 @@
 <body>
 
   <div class="container">
+
     <div class="jumbotron">
-      <h1>Star Wars Express</h1>
-      <h3>Book your seat before they are all gone!</h3>
+      <h1 class="text-center"></span>Hot Restaurant</h1>
       <hr>
-      <a href="/add"><button class="btn btn-danger btn-lg"><span class="fa fa-plus"></span> Add NewHot Restaurant
-          Character</button></a>
-      <a href="/api/characters"><button class="btn btn-danger btn-lg"><span
-            class="fa fa-eye"></span> All Characters</button></a>
-    </div>
-    <div class="row">
+      <h2 class="text-center">Book your seat before they all are gone!</h2>
+      <br>
 
-      <div class="col-12">
-
-        <div class="card mb-4">
-          <div class="card-header">
-            <h3><strong>Character Search</strong></h3>
-          </div>
-          <div class="card-body">
-            <input type="text" id="character-search" class="form-control">
-            <br>
-            <div class="text-right">
-              <button type="submit" class="btn btn-primary btn-md" id="search-btn"><span
-                  class="fa fa-search"></span> Search
-                Your Feelings. You know it is true.</button>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header">
-            <h3><strong>Character Statistics</strong></h3>
-          </div>
-          <div class="card-body">
-            <h2 id="name">Yoda</h2>
-            <div id="stats">
-              <h3><strong>Role:</strong> <span id="role">Jedi Master</span></h3>
-              <h3><strong>Age:</strong> <span id="age">900</span></h3>
-              <h3><strong>Force Points:</strong> <span id="force-points">2000</span></h3>
-            </div>
-          </div>
-        </div>
+      <div class="text-center">
+        <a href="/view-0tables"><button class="btn btn-lg btn-primary"></span> View Tables</button></a>
+        <a href="/make-res"><button class="btn btn-lg btn-danger"></span> Make Reservation</button></a>
       </div>
+
     </div>
-  </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p><a href=#>API Table Link</a> | <a href=#>API Wait List</a> </p>
+      </div>
+    </footer>
 
   <script type="text/javascript">
     $("#search-btn").on("click", function() {
