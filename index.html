@@ -25,7 +25,7 @@
       <br>
 
       <div class="text-center">
-        <a href="/view-0tables"><button class="btn btn-lg btn-primary"></span> View Tables</button></a>
+        <a href="/view-tables"><button class="btn btn-lg btn-primary"></span> View Tables</button></a>
         <a href="/make-res"><button class="btn btn-lg btn-danger"></span> Make Reservation</button></a>
       </div>
 
@@ -37,31 +37,7 @@
       </div>
     </footer>
 
-  <script type="text/javascript">
-    $("#search-btn").on("click", function() {
-      var searchedCharacter = $("#character-search").val().trim();
-
-      // Using a RegEx Pattern to remove spaces from searchedCharacter
-      // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-      searchedCharacter = searchedCharacter.replace(/\s+/g, "").toLowerCase();
-
-      $.get("/api/characters/" + searchedCharacter, function(data) {
-        console.log(data);
-        if (data) {
-          $("#stats").show();
-          $("#name").text(data.name);
-          $("#role").text(data.role);
-          $("#age").text(data.age);
-          $("#force-points").text(data.forcePoints);
-        } else {
-          $("#name").text(
-            "The force is not strong with this one. Your character was not found.");
-          $("#stats").hide();
-        }
-      });
-    });
-
-  </script>
+  
 </body>
 
 </html>
