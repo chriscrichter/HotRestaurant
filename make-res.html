@@ -20,8 +20,8 @@
       <h2 class="text-center">Reservations and Waiting List</h2>
       <br>
       <div class="text-center">
-        <a href="/view-tables"><button class="btn btn-lg btn-primary">View Tables</button></a>
-        <a href="/"><button class="btn btn-lg btn-default"><span class="fa fa-home"></span></button></a>
+        <a href="view-tables.html"><button class="btn btn-lg btn-primary">View Tables</button></a>
+        <a href="index.html"><button class="btn btn-lg btn-default"><span class="fa fa-home"></span></button></a>
       </div>
     </div>
   <div class="container">   
@@ -52,7 +52,7 @@
             </form>
             <br>
             <div class="text-left">
-              <button type="submit" class="btn btn-primary btn-md" id="add-btn"></span>Submit</button>
+              <button type="submit" class="submit btn btn-primary btn-md" id="add-btn"></span>Submit</button>
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@ $("#add-btn").on("click", function(event) {
 
   console.log(newReservation);
 
-  $.post("/api/tables", newReservation,
+  $.post("http://localhost:3000/api/tables", newReservation,
         function(data) {
 
           if (data) {
