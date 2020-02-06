@@ -15,10 +15,10 @@ app.use(express.urlencoded({extended: true}))
 // =============================================================
 var tables = [
   {
-    Name: 'Alex',
-    Number: "",
-    Email: 'alex@gmail.com',
-    ID: 1,
+    name: 'Alex',
+    number: "",
+    email: 'alex@gmail.com',
+    id: 1,
   },
 ]
 // WaitList (DATA)

@@ -21,8 +21,8 @@
         <h2 class="text-center">Reservations and Waiting List</h2>
         <br>
         <div class="text-center">
-          <a href="make-res.html"><button class="btn btn-lg btn-danger">Make Reservation</button></a>
-          <a href="index.html"><button class="btn btn-lg btn-default"><span class="fa fa-home"></span></button></a>
+          <a href="make-res"><button class="btn btn-lg btn-danger">Make Reservation</button></a>
+          <a href="/"><button class="btn btn-lg btn-default"><span class="fa fa-home"></span></button></a>
         </div>
       </div>
       <div class="row">
@@ -49,5 +49,20 @@
         <p><a href=#>API Table Link</a> | <a href=#>API Wait List</a> </p>
       </div>
     </footer>
+
+    <script>
+    $.get("http://localhost:3000/api/tables",
+  function(data) {
+    data.forEach(table => {
+      console.log('table', table); 
+      const name = $("<p></p>").text(table.name); 
+      const phone = $("<p></p>").text(table.phone); 
+      const email = $("<p></p>").text(table.email); 
+      const id = $("<p></p>").text(table.id); 
+      $('#tableSection').append(name, phone, email, id); 
+      
+  });
+});
+</script>
 </body>
 </html>
